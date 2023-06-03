@@ -55,6 +55,8 @@ printer.print("Document")
 # printer.fax("Document")
 # printer.scan("Document")
 print()
+
+
 # with ISP
 
 
@@ -118,15 +120,15 @@ class MultiFunctionDevice(Printer, Scanner):
 
 
 class MultiFunctionPrinter(MultiFunctionDevice):
-    def __init__(self, printer, scanner) -> None:
-        self.printer = printer
-        self.scanner = scanner
+    def __init__(self, printer_, scanner_) -> None:
+        self.printer = printer_
+        self.scanner = scanner_
 
     def print(self, document):
-        print("Printing document: " + str(document))
+        self.printer.print(document)
 
     def scan(self, document):
-        print("Scanning document: " + str(document))
+        self.scanner.scan(document)
 
 
 print("Using MultiFunctionPrinter")
