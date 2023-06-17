@@ -1,0 +1,26 @@
+Design Patterns in Python
+
+- The SOLID Design Principles
+- Builder
+- Factories
+- Prototype
+- Singleton
+- Adapter
+- Bridge
+- Composite
+- Decorator
+- Façade
+- Flyweight
+- Proxy
+- Chain of Responsibility
+- Command
+- Interpreter
+- Iterator
+- Mediator
+- Memento
+- Observer
+- State
+- Strategy
+- Template Method
+- Visitor
+- Summary and Extras
