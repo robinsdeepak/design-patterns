@@ -49,7 +49,7 @@ class HotDrinkMachine:
     def make_drink(self):
         print("Available drinks:")
         for d in self.AvailableDrink:
-            print(f'{d.value}: {d.name}')
+            print(f"{d.value}: {d.name}")
 
         s = input("Please pick a drink(ex: 1): ")
         drink_idx = int(s.strip())

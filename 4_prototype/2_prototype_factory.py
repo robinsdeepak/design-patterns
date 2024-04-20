@@ -23,8 +23,8 @@ class Employee:
 
 
 class EmployeeFactory:
-    main_office_employee = Employee('', Address('#123', 'London', 0, 'UK'))
-    aux_office_employee = Employee('', Address('#123B', 'London', 0, 'UK'))
+    main_office_employee = Employee("", Address("#123", "London", 0, "UK"))
+    aux_office_employee = Employee("", Address("#123B", "London", 0, "UK"))
 
     @staticmethod
     def __new_employee(prototype: Employee, name, suite):
@@ -46,8 +46,8 @@ class EmployeeFactory:
         )
 
 
-john = EmployeeFactory.new_main_office_employee('John', 501)
-jane = EmployeeFactory.new_aux_office_employee('Jane', 200)
+john = EmployeeFactory.new_main_office_employee("John", 501)
+jane = EmployeeFactory.new_aux_office_employee("Jane", 200)
 
 print(john)
 print(jane)

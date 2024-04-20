@@ -21,9 +21,9 @@ class Person:
         return f"{self.name}, {self.address}"
 
 
-john = Person('John', Address('123', 'London', 'UK'))
+john = Person("John", Address("123", "London", "UK"))
 jane = copy.deepcopy(john)
-jane.name = 'Jane'
-jane.address.street = '231'
+jane.name = "Jane"
+jane.address.street = "231"
 print(john)
 print(jane)

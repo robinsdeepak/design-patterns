@@ -16,10 +16,7 @@ class Point:
 
         @staticmethod
         def new_polar_point(r, theta):
-            return Point(
-                r * math.cos(theta),
-                r * math.sin(theta)
-            )
+            return Point(r * math.cos(theta), r * math.sin(theta))
 
     factory = PointFactory()
 

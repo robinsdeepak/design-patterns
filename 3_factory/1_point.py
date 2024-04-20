@@ -31,10 +31,7 @@ class Point2:
 
     @staticmethod
     def new_polar_point(r, theta):
-        return Point2(
-            r * math.cos(theta),
-            r * math.sin(theta)
-        )
+        return Point2(r * math.cos(theta), r * math.sin(theta))
 
     def __str__(self):
         return f"x: {self.x}, y: {self.y}"

@@ -6,7 +6,7 @@ class Database:
 
     def __init__(self):
         self.id = random.randint(1, 10000)
-        print(f'loading database...')
+        print(f"loading database...")
 
     def __str__(self):
         return f"id: {self.id}"

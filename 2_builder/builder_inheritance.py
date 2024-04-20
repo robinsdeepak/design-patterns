@@ -5,7 +5,7 @@ class Person:
         self.date_of_birth = None
 
     def __str__(self):
-        return f'{self.name} born on {self.date_of_birth} works as a {self.position}'
+        return f"{self.name} born on {self.date_of_birth} works as a {self.position}"
 
     @staticmethod
     def new():
@@ -38,11 +38,9 @@ class PersonBirthDateBuilder(PersonJobBuilder):
         return self
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     pb = PersonBirthDateBuilder()
-    me = pb \
-        .called('Dmitri') \
-        .works_as_a('quant') \
-        .born('1/1/1980') \
-        .build()  # this does NOT work in C#/C++/Java/...
+    me = (
+        pb.called("Dmitri").works_as_a("quant").born("1/1/1980").build()
+    )  # this does NOT work in C#/C++/Java/...
     print(me)

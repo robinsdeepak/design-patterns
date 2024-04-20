@@ -1,6 +1,6 @@
 class Person:
     def __init__(self):
-        print('Creating an instance of Person')
+        print("Creating an instance of Person")
         # address
         self.street_address = None
         self.postcode = None
@@ -11,8 +11,10 @@ class Person:
         self.annual_income = None
 
     def __str__(self) -> str:
-        return f'Address: {self.street_address}, {self.postcode}, {self.city}\n' + \
-            f'Employed at {self.company_name} as a {self.postcode} earning {self.annual_income}'
+        return (
+            f"Address: {self.street_address}, {self.postcode}, {self.city}\n"
+            + f"Employed at {self.company_name} as a {self.postcode} earning {self.annual_income}"
+        )
 
 
 class PersonBuilder:  # facade
@@ -68,18 +70,17 @@ class PersonAddressBuilder(PersonBuilder):
         return self
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     pb = PersonBuilder()
-    p = pb \
-        .lives \
-        .at('123 London Road') \
-        .in_city('London') \
-        .with_postcode('SW12BC') \
-        .works \
-        .at('Fabrikam') \
-        .as_a('Engineer') \
-        .earning(123000) \
+    p = (
+        pb.lives.at("123 London Road")
+        .in_city("London")
+        .with_postcode("SW12BC")
+        .works.at("Fabrikam")
+        .as_a("Engineer")
+        .earning(123000)
         .build()
+    )
     print(p)
     person2 = PersonBuilder().build()
     print(person2)
